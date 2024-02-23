@@ -1,0 +1,8 @@
+Ejemplos RC y RL 
+
+- Calcular las Ecuaciones Diferenciales diff(Vc(t), t), diff(Ic(t),t) o diff(Vl(t), t), diff(Il(t),t)
+- Calcular las condiciones iniciales
+- Aplicar la Transformada de Laplace y obtener Vc(s), Ic(s) o Vl(s), Il(s) 
+- Obtener el polinomio característico  (Ts + 1)
+- Aplicar la Anti-Transformada de Laplace y obtener Vc(t), Ic(t) o Vl(t), Il(t)
+- Generar las Gráficas 
