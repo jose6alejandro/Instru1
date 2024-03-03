@@ -1,7 +1,8 @@
+%Práctica 3 - Castro José, Hurtado Carlos.
 clear all
 close all
 global Req R2 R3 Rm V C FREQ PERIODO;
-%Par�metros del sistema
+%Parámetros del sistema
 
 FREQ = 378.8; 
 PERIODO = 1/FREQ;
@@ -75,13 +76,13 @@ IcODE = [icIni];
     tInicial = tTotal(end);
  end
 
-%Extracci�n de la data
+%Extracción de la data
 dvoltaje = importdata('Data/Voltaje.CSV',',',18);
 VoltajeData =  dvoltaje.data(:, 4:5);
 dcorriente = importdata('Data/Corriente.CSV',',',18);
 CorrienteData = dcorriente.data(:, 4:5);
 
-%Gr�ficas Vc e Ic
+%Gráficas Vc e Ic
 figure(1);
 plot((tTotal),infODE(:,1),'g',(tTotal),VcODE,'r', (VoltajeData(:,1))+2.8594e-3, VoltajeData(:,2)-2.32,'b');
 title('Voltaje del capacitor');
@@ -98,7 +99,7 @@ ylabel('Voltaje (Vols)');
 legend('ODE', 'Maple', 'Experimental');
 grid on;
 
-%C�lculo del error 
+%Cálculo del error 
 longitud = length(tTotal);
 %errorVmae = mean(abs((VoltajeData(1:longitud,2) - VcODE)/ longitud))
 %errorImae = mean(abs(((CorrienteData(1:longitud,1)/Rm) - IcODE) / longitud))
