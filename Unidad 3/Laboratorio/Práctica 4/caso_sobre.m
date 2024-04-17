@@ -203,8 +203,8 @@ tt = vlData(50:433,1);
 VL_maple_ = exp(-(1/2)*(C*R1*R2+C*R1*R3+C*R2*R3+L)*tt/(C*(R1+R3)*L)).*(condicion_inicial.*cosh((1/2)*tt*sqrt(C^2*R1^2*R2^2+2*C^2*R1^2*R2*R3+C^2*R1^2*R3^2+2*C^2*R1*R2^2*R3+2*C^2*R1*R2*R3^2+C^2*R2^2*R3^2-4*C*L*R1^2-2*C*L*R1*R2-2*C*L*R1*R3-2*C*L*R2*R3+L^2)/(C*(R1+R3)*L))+sinh((1/2)*tt*sqrt(C^2*R1^2*R2^2+2*C^2*R1^2*R2*R3+C^2*R1^2*R3^2+2*C^2*R1*R2^2*R3+2*C^2*R1*R2*R3^2+C^2*R2^2*R3^2-4*C*L*R1^2-2*C*L*R1*R2-2*C*L*R1*R3-2*C*L*R2*R3+L^2)/(C*(R1+R3)*L))*(2*condicion_inicial_diff*C*L*R1+2*condicion_inicial_diff*C*L*R3+C*condicion_inicial*R1*R2+C*condiciones_iniciales(4)*R1*R3+C*condicion_inicial*R2*R3+L*condicion_inicial)/sqrt(C^2*R1^2*R2^2+2*C^2*R1^2*R2*R3+C^2*R1^2*R3^2+2*C^2*R1*R2^2*R3+2*C^2*R1*R2*R3^2+C^2*R2^2*R3^2-4*C*L*R1^2-2*C*L*R1*R2-2*C*L*R1*R3-2*C*L*R2*R3+L^2));
 VL_maple_total = VL_maple_ + (RL * ilData(50:433,2));
 errorVLmape = mean(abs(((vlData(50:433,2)+5) - (VL_maple_total + 5)) ./ (vlData(50:433,2)+5))) * 100 / longitud;
-figure(3)
-plot(tt, VL_maple_total, tt, vlData(50:433,2));
+%figure(3)
+%plot(tt, VL_maple_total, tt, vlData(50:433,2));
 
 format long;
 errores = [errorVmape errorImape errorILmape errorVLmape];

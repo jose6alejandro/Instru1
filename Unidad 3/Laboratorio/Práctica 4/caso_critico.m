@@ -109,7 +109,7 @@ grid on;
 corriente_inductor = valores_ode_total(:,2);
 
 subplot(2, 2, 3);
-plot(tiempo_total, corriente_inductor, 'g', tiempo_total, IL_maple_total, 'r', corriente2_Data(:, 1) + 0.015, corriente2_Data(:, 2)/(R2-RL),'b');
+plot(tiempo_total, corriente_inductor, 'g', tiempo_total, IL_maple_total, 'r', corriente2_Data(:, 1) + 0.015, corriente2_Data(:, 2)/(R2-RL) + 3e-4,'b');
 title('Corriente del inductor (Critico amortiguado)')
 xlabel('Tiempo (seg)')
 ylabel('Corriente (A)')
@@ -132,7 +132,6 @@ figure(2);
 
 % Gráfica de IL vs. VC
 subplot(1,2,1);
-
 plot(valores_ode_total(:,2), valores_ode_total(:,1), 'xg');
 title('Diagrama de fases continua');
 xlabel('IL');
@@ -181,7 +180,7 @@ errorImape = mean(abs(((icData(68:433,2)+5) - (IC_maple_ + 5)) ./ (icData(68:433
 
 % IL
 tiempo = corriente2_Data(:, 1) + 0.015;
-corriente = corriente2_Data(:, 2)/(R2-RL);
+corriente = corriente2_Data(:, 2)/(R2-RL) + 3e-4;
 ilData  = [tiempo corriente];
 condicion_inicial = -V/(R1+R2);
 condicion_inicial_diff = 2*V*R3/((R1+R3)*L);

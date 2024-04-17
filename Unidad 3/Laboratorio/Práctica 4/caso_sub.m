@@ -91,7 +91,7 @@ voltaje2_Data =  vl.data(:, 4:5);
 figure(1);
 subplot(2, 2, 1);
 plot(tiempo_total,valores_ode_total(:,1),'g', tiempo_total, VC_maple_total,'r', voltaje_Data(:, 1) + 0.01465, voltaje_Data(:, 2),'b');
-title('Voltaje del condensador (sobreamortiguado)')
+title('Voltaje del capacitor (sobreamortiguado)')
 xlabel('Tiempo (seg)')
 ylabel('Voltaje (V)')
 legend('ODE','Maple','Experimental')
@@ -99,7 +99,7 @@ grid on;
 
 subplot(2, 2, 2);
 plot(tiempo_total, valores_ode_total(:,3),'g', tiempo_total, IC_maple_total,'r', corriente_Data(:, 1)  + 0.01467, corriente_Data(:, 2)/R3 + 6.6668099e-4,'b');
-title('Corriente del condensador (subamortiguado)')
+title('Corriente del capacitor (subamortiguado)')
 xlabel('Tiempo (seg)')
 ylabel('Corriente (A)')
 legend('ODE','Maple','Experimental')
