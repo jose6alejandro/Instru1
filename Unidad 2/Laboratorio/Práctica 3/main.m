@@ -106,7 +106,7 @@ condIni = -1.2;
 vcMaple = (((R2+R3+Req)*condIni-R2*V)*exp(-(R2+R3+Req)*(vcData(44:707,1))/(((R3+Req+Rm)*R2+Rm*(R3+Req))*C))+R2*V)/(R2+R3+Req) + 2.32;
 %plot(vcData(44:707,1),vcMaple,vcData(44:707,1),vcData(44:707,2));
 longitud = length(vcData(44:707,1));
-errorVmape = mean(abs((vcData(44:707,2)- vcMaple) ./ vcData(44:707,2))) * 100 / longitud
+errorVmape = sum(abs((vcData(44:707,2)- vcMaple) ./ vcData(44:707,2))) * 100 / longitud
 
 
 condIni = 0.001438;
@@ -115,5 +115,5 @@ icData = [tiempo corriente];
 icMaple = exp(-(R2+R3+Req)*(vcData(44:700,1))/((R2*R3+R2*Req+R2*Rm+R3*Rm+Req*Rm)*C))*condIni + 0.001;
 %plot(icData(44:700,1),icMaple,icData(44:700,1),icData(44:700,2))
 longitud = length(icData(44:700,1));
-errorImape = mean(abs((icData(44:700,2)- icMaple) ./ icData(44:700,2))) * 100 / longitud
+errorImape = sum(abs((icData(44:700,2)- icMaple) ./ icData(44:700,2))) * 100 / longitud
 
