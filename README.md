@@ -27,8 +27,6 @@ La asignatura "Instrumentación 1" aporta los conocimientos básicos para el ár
   - Amplificadores operacionales
   - Diodos
   - Transistores
-  - 
- 
 ## Herramientas
 - Matlab
 - Maple
