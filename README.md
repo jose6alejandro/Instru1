@@ -9,10 +9,10 @@ La asignatura "Instrumentación 1" aporta los conocimientos básicos para el ár
   - Divisor de tensión y corriente
   - Teoremas de Thevenin y Norton, Superposición 
 - Unidad 2: Sistemas de Primer Orden
-	- Capacitor
+  - Capacitor
   - Inductor
-	- Régimen estacionario y transitorio
-	- Función de transferencia
+  - Régimen estacionario y transitorio
+  - Función de transferencia
   - Condiciones iniciales
   - Interruptores
   - Diagrama de fase
