@@ -21,6 +21,7 @@ La asignatura "Instrumentación 1" aporta los conocimientos básicos para el ár
   - Representación de los sistemas (EDO, Espacio de estados, Laplace, Solución explicita, Fasores)
   - Introducción a sistemas no lineales    
 - Unidad 4: Análisis frecuencial e introducción a la electrónica
+  - BODE
   - Fasores
   - Impedancia
   - Análisis frecuencial
